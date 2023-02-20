@@ -71,12 +71,18 @@ jobs:
           # 例如:
 
           cat >> .config <<EOF
-          CONFIG_TARGET_x86=y
-          CONFIG_TARGET_x86_64=y
-          CONFIG_TARGET_x86_64_Generic=y
+          CONFIG_TARGET_ramips=y
+          CONFIG_TARGET_ramips_mt7620=y
+          CONFIG_TARGET_ramips_mt7620_DEVICE_phicomm_psg1218a=y
           CONFIG_TARGET_IMAGES_GZIP=y
           CONFIG_KERNEL_BUILD_USER="wwng@github"
           CONFIG_KERNEL_BUILD_DOMAIN="Azure"
+          CONFIG_LIBCURL_NO_SMB="!"
+          # CONFIG_PACKAGE_luci-app-samba is not set
+          # CONFIG_PACKAGE_autosamba is not set
+          # CONFIG_PACKAGE_luci-app-vlmcsd is not set
+          # CONFIG_PACKAGE_luci-app-vsftpd is not set
+          
           EOF
 
           #
